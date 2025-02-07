@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Tetris</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="level-select">
+            <h1>Selecciona Nivel</h1>
+            <button onclick="startGame('easy')">Fácil</button>
+            <button onclick="startGame('medium')">Intermedio</button>
+            <button onclick="startGame('hard')">Difícil</button>
+        </div>
+        <div class="game-board" style="display:none;">
+            <div class="score-container">
+                <p>Puntuación: <span id="score">0</span></p>
+                <p>Récord: <span id="highscore">0</span></p>
+            </div>
+            <canvas id="tetris" width="300" height="600"></canvas>
+            <div class="controls">
+                <button onclick="movePiece('left')">Izquierda</button>
+                <button onclick="movePiece('right')">Derecha</button>
+                <button onclick="rotatePiece()">Rotar</button>
+            </div>
+            <div class="scoreboard">
+                <button id="restartButton">Reiniciar</button>
+                <button onclick="goToStart()">Volver al inicio</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
